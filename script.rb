@@ -6,6 +6,7 @@ def substrings(string, dict)
   string_array.each do |word|
     dict.each do |dict_word|
       if word.include?(dict_word)
+        # If current match is not in hash, initialize it, otherwise update it
         unless matches[dict_word]
           matches[dict_word] = 1
         else
